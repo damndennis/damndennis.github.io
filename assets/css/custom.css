@@ -1,0 +1,330 @@
+/* custom */
+@font-face {
+  font-family: "autobus";
+  src: url("../fonts/Autobus.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* sriftas */
+html, body {
+  font-family: "Raleway", "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+/* antrasciu nustatymai */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "autobus", "Raleway", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #0d6efd; /* melyna */
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+/* pastraipos */
+p {
+  font-family: "Raleway", sans-serif; 
+  color: #a85081;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+}
+
+/* dydziai */
+h1 { font-size: 2.4rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.3rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* nuorodos */
+a {
+  color: #0d6efd;               
+  text-decoration: none;       
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover {
+  color: #0b5ed7;              
+  text-decoration: underline;   
+}
+
+a:active {
+  color: #094db6;               
+}
+
+a:visited {
+  color: #6610f2;              
+}
+
+/* Mygtukai */
+
+:root { --accent-color: #b20fdb; }
+
+button,
+.btn,
+input[type="button"],
+input[type="submit"],
+.submit-btn,
+.btn-primary {
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
+  transition: background .2s, transform .12s, box-shadow .2s;
+  cursor: pointer;
+}
+
+button:hover,
+.btn:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.submit-btn:hover,
+.btn-primary:hover {
+  background: #bbff00;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(0,0,0,.28);
+}
+
+button:active,
+.btn:active,
+input[type="button"]:active,
+input[type="submit"]:active,
+.submit-btn:active,
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: none;
+  filter: brightness(.95);
+}
+
+/* Nuorodos */
+a {
+  color: #fb923c;
+  text-decoration: none;
+  transition: color .2s, text-decoration .2s;
+}
+
+a:hover {
+  color: #f97316;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #ea580c;
+}
+
+a:visited {
+  color: #a855f7;
+}
+
+a:focus-visible {
+  outline: 2px solid #fb923c;
+  outline-offset: 2px;
+}
+
+/* Nav */
+#navmenu a {
+  color: #e5e7eb;
+}
+#navmenu a:hover,
+#navmenu a.active {
+  color: #fff;
+  background: rgba(251,146,60,.14);
+  border-radius: 10px;
+}
+
+:root{
+  --sec-pad: 72px;   /* vienoda sekciju paraiste */
+  --gap: 24px;       /* vienodas tarpas tarp blokų */
+  --radius: 14px;    /* uzapvalinimai */
+  --border: 1px solid rgba(255,255,255,.10); /* subtili krastine */
+  --shadow: 0 10px 24px rgba(0,0,0,.20);     /* seselis */
+}
+
+/* a) vienodas sekciju padding */
+#about.section,
+#resume.section,
+#portfolio.section{
+  padding-top: var(--sec-pad) !important;
+  padding-bottom: var(--sec-pad) !important;
+}
+
+/* a) vidinis tarpas tarp blokų */
+#about .row > [class*="col-"] > *{ margin-bottom: var(--gap); }   /* About */
+#resume .row > [class*="col-"] > *{ margin-bottom: var(--gap); }  /* Resume */
+#portfolio .row > [class*="col-"] > *{ margin-bottom: var(--gap); } /* Portfolio */
+
+/* b) About blokai: krastines, radius, seselis */
+#about .profile-section,
+#about .content-area,
+#about .education-card,
+#about .achievements-row .achievement,
+#about .stats-grid .stat-item{
+  background: color-mix(in srgb, var(--background-color), #000 12%);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+
+/* b) Resume blokai */
+#resume .professional-journey,
+#resume .education-skills,
+#resume .education-skills .education-card,
+#resume .skills-sidebar .expertise-highlight{
+  background: color-mix(in srgb, var(--background-color), #000 12%);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+/* Portfolio korteles */
+#portfolio .portfolio-card{
+  background: color-mix(in srgb, var(--background-color), #000 12%);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+#portfolio .portfolio-image{ border-radius: calc(var(--radius) - 4px); }
+
+/* Nav – bazinis */
+#header.header { background: #0f172a; border-right: 1px solid rgba(255,255,255,.08); }
+
+/* Nav – nuorodos (pill) */
+#header .navmenu a {
+  color: #e5e7eb;
+  background: transparent;
+  border-radius: 12px;
+  padding: 12px 12px;
+}
+#header .navmenu a:hover,
+#header .navmenu .active {
+  color: #0f172a;
+  background: #22e7a1;
+}
+#header .navmenu a .navicon { margin-right: 10px; opacity: .9; }
+#header .navmenu a:hover .navicon,
+#header .navmenu .active .navicon { color: #0f172a; }
+
+/* Nav – dropdown */
+#header .navmenu .dropdown ul {
+  background: #111827;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+}
+#header .navmenu .dropdown a { color: #cbd5e1; }
+#header .navmenu .dropdown a:hover { color: #22e7a1; }
+
+/* Scroll-top – forma */
+#scroll-top.scroll-top {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  background: #22e7a1;
+  box-shadow: 0 12px 28px rgba(0,0,0,.35);
+  transition: transform .15s ease, background .2s ease, box-shadow .2s ease;
+}
+#scroll-top.scroll-top:hover {
+  background: #19c488;
+  transform: translateY(-3px);
+  box-shadow: 0 18px 36px rgba(0,0,0,.40);
+}
+#scroll-top.scroll-top i { color: #0f172a; }
+
+/* --- 1. Sarasai --- */
+ul.list-a {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.list-a li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin: 0.55rem 0;
+}
+ul.list-a li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  opacity: 0.8;
+}
+
+/* Numeruotas sarasas su counter */
+ol.list-b {
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ol.list-b > li {
+  counter-increment: item;
+  position: relative;
+  padding-left: 2.2rem;
+  margin: 0.6rem 0;
+}
+ol.list-b > li::before {
+  content: counter(item) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+/* Nested sarasas */
+ul.list-a ul {
+  margin-top: 0.4rem;
+  margin-left: 1rem;
+  opacity: 0.9;
+}
+
+/* --- 2. Services lentele --- */
+.services-table-wrap {
+  overflow: auto;
+}
+
+.services-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.services-table th,
+.services-table td {
+  padding: 14px 16px;
+}
+
+/* Antraste */
+.services-table thead th {
+  background: #0d6efd;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Zebra + hover */
+.services-table tbody tr:nth-child(odd) {
+  background: rgba(11, 108, 255, 0.06);
+}
+.services-table tbody tr:hover {
+  background: rgba(13, 110, 253, 0.14);
+}
+
+/* Linijos */
+.services-table thead th + th,
+.services-table tbody td + td {
+  border-left: 1px solid rgba(204, 30, 30, 0.08);
+}
+.services-table tbody tr + tr td {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
