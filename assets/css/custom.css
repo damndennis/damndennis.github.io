@@ -380,57 +380,12 @@ ul.list-a ul {
   100% { transform: rotate(360deg); }
 }
 
-/* reduced motion */
-@media (prefers-reduced-motion: reduce) {
 
-  /* disable fade anim */
-  .fade-section {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  /* stop floating icons */
-  .icon-float {
-    animation: none !important;
-    transform: none !important;
-  }
-
-  /* simplify preloader */
-  #preloader::before {
-    animation: none !important;
-    border: 4px solid #94a3b8;
-    border-top-color: #94a3b8;
-  }
-
-  /* reduced motion */
-@media (prefers-reduced-motion: reduce) {
-
-  /* disable fade anim */
-  .fade-section {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  /* stop floating icons */
-  .icon-float {
-    animation: none !important;
-    transform: none !important;
-  }
-
-  /* simplify preloader */
-  #preloader::before {
-    animation: none !important;
-    border: 4px solid #94a3b8;
-    border-top-color: #94a3b8;
-  }
-}
 /* services gradient bg */
 #services.section {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #22e7a1, #074968, #a855f7);
+  background: linear-gradient(135deg, #22e7a1, #010507, #a855f7);
   background-size: 300% 300%;
   animation: services-gradient 12s ease infinite;
   border-radius: 16px;
@@ -518,6 +473,50 @@ ul.list-a ul {
     transform: none !important;
   }
 }
+/* stop floating icons */
+  .icon-float {
+    animation: none !important;
+    transform: none !important;
+  }
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
 
+  /* disable fade anim */
+  .fade-section {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 
+  /* stop floating icons */
+  .icon-float {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  /* simplify preloader */
+  #preloader::before {
+    animation: none !important;
+    border: 4px solid #94a3b8;
+    border-top-color: #94a3b8;
+  }
+
+  /* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  /* disable fade anim */
+  .fade-section {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  
+  /* simplify preloader */
+  #preloader::before {
+    animation: none !important;
+    border: 4px solid #94a3b8;
+    border-top-color: #94a3b8;
+  }
+}
 }
