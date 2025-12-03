@@ -1165,6 +1165,64 @@ Didelę reikšmę teikiu savarankiškam tobulėjimui – siekiu ne tik suprasti,
 
   </main>
 
+      <!-- Game Section -->
+    <section id="game" class="game section light-background fade-section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Mano zaidimas</h2>
+        <p>Atminties korteliu zaidimas.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4 align-items-start">
+
+          <!-- Kaire puse: nustatymai ir statistika -->
+          <div class="col-lg-4">
+            <div class="game-panel">
+              <h3 class="game-subtitle">Nustatymai</h3>
+
+              <div class="game-difficulty mb-3">
+                <label class="form-label">Sudetingumo lygis:</label>
+                <div class="btn-group" role="group" aria-label="Sudetingumo pasirinkimas">
+                  <input type="radio" class="btn-check" name="gameDifficulty" id="difficultyEasy" value="easy" checked>
+                  <label class="btn btn-outline-light game-diff-btn" for="difficultyEasy">Lengvas (4x3)</label>
+
+                  <input type="radio" class="btn-check" name="gameDifficulty" id="difficultyHard" value="hard">
+                  <label class="btn btn-outline-light game-diff-btn" for="difficultyHard">Sunkus (6x4)</label>
+                </div>
+              </div>
+
+             <div class="game-stats mt-3">
+              <h3 class="game-subtitle">Statistika</h3>
+              <p>Ejimai: <span id="movesCount">0</span></p>
+              <p>Surastos poros: <span id="pairsFound">0</span></p>
+              <p>Laikmatis: <span id="gameTimer">00:00</span></p>
+              <p>Geriausias (lengvas): <span id="bestEasy">-</span></p>
+              <p>Geriausias (sunkus): <span id="bestHard">-</span></p>
+            </div>
+
+
+              <div class="game-controls mt-4 d-flex gap-2">
+                <button id="btnStart" class="btn-primary flex-grow-1" type="button">Start</button>
+                <button id="btnReset" class="btn-secondary flex-grow-1" type="button">Atnaujinti</button>
+              </div>
+
+              <div class="game-message mt-3" id="gameMessage" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <!-- Desine puse: zaidimo lenta -->
+          <div class="col-lg-8">
+            <div class="game-board-wrapper">
+              <div id="gameBoard" class="game-board" aria-label="Atminties zaidimo lenta"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /Game Section -->
+
   <footer id="footer" class="footer light-background">
     <div class="container">
       <h3 class="sitename">Danielius Šeščila</h3>

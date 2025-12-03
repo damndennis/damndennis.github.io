@@ -519,4 +519,134 @@ ul.list-a ul {
     border-top-color: #94a3b8;
   }
 }
+/* --- 11. Mano zaidimas --- */
+
+#game.section {
+  padding-top: var(--section-padding, 60px);
+  padding-bottom: var(--section-padding, 60px);
 }
+
+.game-panel {
+  background: color-mix(in srgb, var(--background-color), #000 12%);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.game-subtitle {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.game-stats p {
+  margin-bottom: 0.25rem;
+}
+
+.game-controls .btn-primary,
+.game-controls .btn-secondary {
+  border-radius: 999px;
+}
+
+.game-message {
+  min-height: 1.5rem;
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+.game-message--win {
+  color: #22e7a1;
+}
+
+/* lenta konteineris */
+.game-board-wrapper {
+  background: color-mix(in srgb, var(--background-color), #000 12%);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+/* korteliu tinklelis */
+.game-board {
+  display: grid;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* bendra korteles forma */
+.game-card {
+  position: relative;
+  width: 80px;
+  height: 100px;
+  perspective: 800px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.game-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.35s ease;
+}
+
+.game-card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* priekis */
+.game-card-front {
+  background: linear-gradient(135deg, #22e7a1, #0ea5e9);
+  color: #0f172a;
+}
+
+/* nugara */
+.game-card-back {
+  background: #020617;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  color: #e5e7eb;
+  transform: rotateY(180deg);
+}
+
+/* apvertimas */
+.game-card.is-flipped .game-card-inner,
+.game-card.is-matched .game-card-inner {
+  transform: rotateY(180deg);
+}
+
+.game-card.is-matched {
+  cursor: default;
+  opacity: 0.8;
+}
+
+.game-board.is-locked {
+  pointer-events: none;
+}
+
+/* responsive dydziai */
+@media (min-width: 768px) {
+  .game-card {
+    width: 90px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .game-panel {
+    margin-bottom: 16px;
+  }
+}
+}
+
